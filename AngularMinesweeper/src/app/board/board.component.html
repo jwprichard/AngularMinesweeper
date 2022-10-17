@@ -1,0 +1,13 @@
+<h1>Minesweeper Game</h1>
+
+<button (click)="NewGame()">Start New Game</button>
+<input type="text" name="numSquares" placeholder="Number of Squares">
+
+<main>
+    <app-square
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="MakeMove(i)">
+
+    </app-square>
+</main>
