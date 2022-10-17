@@ -19,8 +19,9 @@ export class BoardComponent implements OnInit {
     this.squares = Array(9).fill(null);
   }
 
-  public MakeMove(idx: number): void{
+  public Collapse(idx: number): void {
     this.squares.splice(idx, 1, 'test')
+    this.squares[idx].UpdateVisibility();
   }
 
 }
